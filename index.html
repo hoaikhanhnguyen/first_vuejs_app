@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- You can import vue.js through a cdn. take out version # for latest version -->
         <script src="https://unpkg.com/vue/dist/vue.js">
         </script>
     </head>
@@ -13,13 +14,16 @@
         <script>
 
             new Vue({
+                //el selects the parent element from the DOM
                 el: '#app',
                 data: {
                     title: 'Hello World!'
+                    //title inside the data obj is a string that gets used in the vue template inside the html
                 },
                 methods: {
                     changeTitle: function(event) {
                         this.title = event.target.value;
+                        //vue lets you use "this" to refer to the propert in the data obj
                     }
                 }
             });
